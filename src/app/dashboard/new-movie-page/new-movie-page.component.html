@@ -1,0 +1,69 @@
+<!-- 
+<div class="container">
+    <div class="form">  
+        <input nz-input placeholder="Title" [(ngModel)]="movieName" />
+        <input nz-input placeholder="Description" [(ngModel)]="movieDescription" />
+        <input nz-input placeholder="Director" [(ngModel)]="movieDirector" />
+        <input nz-input placeholder="Runtime" [(ngModel)]="movieRuntime" />
+        <input nz-input placeholder="Rating" [(ngModel)]="movieRating" />
+    
+      <button nz-button nzType="default" (click)="addNewMovie()">Add</button>
+    </div> -->
+
+    <form nz-form [formGroup]="form" (ngSubmit)="addNewMovie()">
+        <nz-form-item>
+          <nz-form-label [nzSpan]="7" nzRequired>Movie name</nz-form-label>
+          <nz-form-control [nzSpan]="12" [nzErrorTip]="titleErrorTpl">
+            <input nz-input formControlName="movieName"/>
+            <ng-template #titleErrorTpl let-control>
+              <ng-container *ngIf="control.hasError('required')">Please enter the movie name.</ng-container>
+              <ng-container *ngIf="control.hasError('duplicated')">The movie already exists.</ng-container>
+            </ng-template>
+          </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+          <nz-form-label [nzSpan]="7" nzRequired>Director</nz-form-label>
+          <nz-form-control [nzSpan]="12" nzHasFeedback [nzErrorTip]="directorErrorTpl">
+            <input nz-input formControlName="movieDirector"/>
+            <ng-template #directorErrorTpl let-control>
+              <ng-container *ngIf="control.hasError('required')">Please enter the directors name.</ng-container>
+            </ng-template>
+          </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+          <nz-form-label [nzSpan]="7" nzRequired>Runtime</nz-form-label>
+          <nz-form-control [nzSpan]="12" nzHasFeedback nzErrorTip="Please input the runtime.">
+            <input nz-input type="number" formControlName="movieRuntime"/>
+          </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+          <nz-form-label [nzSpan]="7">Rating</nz-form-label>
+          <nz-form-control [nzSpan]="12">
+            <nz-rate formControlName="movieRating" [(ngModel)]="movieRating" nzAllowHalf [nzCharacter]="characterIcon"></nz-rate>
+            <ng-template #characterIcon let-index>
+              <ng-container [ngSwitch]="index">
+                <span nz-icon nzType="frown" *ngSwitchCase="0"></span>
+                <span nz-icon nzType="frown" *ngSwitchCase="1"></span>
+                <span nz-icon nzType="meh" *ngSwitchCase="2"></span>
+                <span nz-icon nzType="smile" *ngSwitchCase="3"></span>
+                <span nz-icon nzType="smile" *ngSwitchCase="4"></span>
+              </ng-container>
+            </ng-template>
+            </nz-form-control>
+        </nz-form-item>
+        
+        <nz-form-item>
+          <nz-form-label [nzSpan]="7" nzRequired>Description</nz-form-label>
+          <nz-form-control [nzSpan]="12" nzHasFeedback nzErrorTip="Please write something here!">
+            <nz-textarea-count [nzMaxCharacterCount]="2000">
+              <textarea formControlName="movieDescription" nz-input rows="4"></textarea>
+            </nz-textarea-count>
+          </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+          <nz-form-control [nzOffset]="7" [nzSpan]="12">
+            <button nz-button nzType="primary" [disabled]="!form.valid">Submit</button>
+            <button nz-button (click)="resetForm($event)">Reset</button>
+          </nz-form-control>
+        </nz-form-item>
+      </form>

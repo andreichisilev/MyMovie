@@ -1,0 +1,22 @@
+<nz-card class="card" [nzTitle]="movie.title" [nzExtra]="extraTemplate">
+    <p class="title">Description</p>
+    <p>{{ movie.description }}</p>
+    <p class="title">Director</p>
+    <p>{{ movie.director }}</p>
+    <p class="title">Runtime</p>
+    <p>{{ movie.runtime }} minutes</p>
+    <nz-rate [ngModel]="movie.rating" [nzCharacter]="characterIcon" nzDisabled></nz-rate>
+    <br />
+    <ng-template #characterIcon let-index>
+      <ng-container [ngSwitch]="index">
+        <span nz-icon nzType="frown" *ngSwitchCase="0"></span>
+        <span nz-icon nzType="frown" *ngSwitchCase="1"></span>
+        <span nz-icon nzType="meh" *ngSwitchCase="2"></span>
+        <span nz-icon nzType="smile" *ngSwitchCase="3"></span>
+        <span nz-icon nzType="smile" *ngSwitchCase="4"></span>
+      </ng-container>
+    </ng-template>
+</nz-card>
+<ng-template #extraTemplate>
+  <button class="edit"nz-button nzType="default" (click)="editMoviePage()"><span class="editIcon" nz-icon nzType="edit" nzTheme="outline"></span></button>
+  </ng-template>

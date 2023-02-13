@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="form">
+      <input nz-input placeholder="Movie name" [(ngModel)]="searchName"/>
+      <button nz-button nzType="primary" (click)="searchByName()"><i nz-icon nzType="search"></i>Search</button>
+      <nz-select [(ngModel)]="selection">
+        <nz-option nzValue="title" nzLabel="Title"></nz-option>
+        <nz-option nzValue="director" nzLabel="Director"></nz-option>
+        <nz-option nzValue="rating" nzLabel="Rating"></nz-option>
+        <nz-option nzValue="runtime" nzLabel="Runtime"></nz-option>
+      </nz-select>
+      <button nz-button nzType="primary"(click)="sort()">Sort</button>
+      <button nz-button nzType="primary"(click)="navigateToNewMoviePage()">Add</button>
+      <button nz-button nzType="primary" (click)="logout()"><i nz-icon nzType="poweroff"></i>Logout</button>
+  
+    </div>
+    <div class="movies">
+      <app-movie-card
+        *ngFor="let movie of filteredMovieList"
+        [movie]="movie"
+        (clickedEdit)="editMoviePage(movie)"
+      ></app-movie-card>
+    </div>
+</div>

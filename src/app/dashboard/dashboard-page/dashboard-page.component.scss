@@ -1,0 +1,31 @@
+.movies{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .form {
+    display: flex;
+    margin-bottom: 20px;
+  
+  
+    input {
+      width: 300px;
+      margin-right: 20px;
+    }
+  }
+
+  .container {
+    padding: 50px;
+  }
+  
+  .ant-btn-primary{
+    margin-left: 10px;
+    background-color: #4E546E;
+    
+  }  
+  
+  .ant-btn-primary:hover{
+    background-color: #C0C0C0;
+  }
+

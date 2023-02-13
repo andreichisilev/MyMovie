@@ -1,0 +1,84 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "The Shawshank Redemption",
+      "description": "Over the course of several years, two convicts form a friendship, seeking consolation and, eventually, redemption through basic compassion.",
+      "director": "Frank Darabont",
+      "runtime": 142,
+      "rating": 4.9
+    },
+    {
+      "id": 2,
+      "title": "Ratatouille",
+      "description": "A rat who can cook makes an unusual alliance with a young kitchen worker at a famous Paris restaurant.",
+      "director": "Brad Bird, Jan Pinkava",
+      "runtime": 111,
+      "rating": 4.1
+    },
+    {
+      "id": 3,
+      "title": "Logan",
+      "description": "In a future where mutants are nearly extinct, an elderly and weary Logan leads a quiet life. But when Laura, a mutant child pursued by scientists, comes to him for help, he must get her to safety.",
+      "director": "James Mangold",
+      "runtime": 137,
+      "rating": 4.1
+    },
+    {
+      "id": 4,
+      "title": "Avatar: The Way of Water",
+      "description": "Jake Sully lives with his newfound family formed on the extrasolar moon Pandora. Once a familiar threat returns to finish what was previously started, Jake must work with Neytiri and the army of the Na'vi race to protect their home.",
+      "director": "James Cameron",
+      "runtime": 192,
+      "rating": 4
+    },
+    {
+      "id": 5,
+      "title": "Black Panther: Wankanda Forever",
+      "description": "The people of Wakanda fight to protect their home from intervening world powers as they mourn the death of King T'Challa.",
+      "director": "Ryan Coogler",
+      "runtime": 161,
+      "rating": 3.2
+    },
+    {
+      "id": 6,
+      "title": "Bullet Train",
+      "description": "Five assassins aboard a swiftly-moving bullet train find out that their missions have something in common.",
+      "director": "David Leitch",
+      "runtime": 127,
+      "rating": 3.8
+    },
+    {
+      "id": 7,
+      "title": "Interstellar",
+      "description": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+      "director": "Christopher Nolan",
+      "runtime": 169,
+      "rating": 4.3
+    },
+    {
+      "id": 8,
+      "title": "The Fallout",
+      "description": "High schooler Vada navigates the emotional fallout she experiences in the wake of a school tragedy. Relationships with her family, friends and view of the world are forever altered.",
+      "director": "Megan Park",
+      "runtime": 96,
+      "rating": 3.6
+    },
+    {
+      "id": 9,
+      "title": "The Dark Knight",
+      "description": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
+      "director": "Christopher Nolan",
+      "runtime": 152,
+      "rating": 4.5
+    },
+    {
+      "id": 10,
+      "title": "The Godfather",
+      "description": "The aging patriarch of an organized crime dynasty in postwar New York City transfers control of his clandestine empire to his reluctant youngest son.",
+      "director": "Francis Ford Coppola",
+      "runtime": 175,
+      "rating": 4.6
+    }
+  ]
+}
